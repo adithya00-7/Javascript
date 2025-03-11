@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function checkAge(age) {
+        //     if (age > 18) {
+        //         return true;
+        //     } else {
+        //         return confirm('Did parents allow you?');
+        //     }
+        //     }
+        //using question mark
+        function checkAge(age) {
+            return (age > 18) ? true : confirm('Did parents allow you?');
+            }
+        //using OR
+        function checkAge1(age) {
+            return (age > 18) || confirm('Did parents allow you?');
+            }
+        age=prompt("enter age");
+        checkAge(age);
+        checkAge1(age);
+    </script>
+</body>
+</html>
