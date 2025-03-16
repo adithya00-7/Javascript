@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //the wrong one ↓
+        // it("Raises x to the power n", function() {
+        // let x = 5;
+
+        // let result = x;
+        // assert.equal(pow(x, 1), result);
+
+        // result *= x;
+        // assert.equal(pow(x, 2), result);
+
+        // result *= x;
+        // assert.equal(pow(x, 3), result);
+        // });
+
+
+
+        //the corrected one ↓
+        describe("Raises x to power n", function() {
+            it("5 in the power of", function() {
+                assert.equal(pow(5, 1), 5);
+                assert.equal(pow(5, 2), 25);
+                assert.equal(pow(5, 3), 125);
+            });
+        });
+    </script>
+</body>
+</html>
