@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function makeCounter() {
+        let count = 0;
+
+        return function() {
+            return count++;
+        };
+        }
+
+        let counter = makeCounter();
+        let counter2 = makeCounter();
+
+        alert( counter() ); // 0
+        alert( counter() ); // 1
+
+        alert( counter2() ); // ?  this will be 0
+        alert( counter2() ); // ?  this will be 1
+        //they are independent
+    </script>
+</body>
+</html>
