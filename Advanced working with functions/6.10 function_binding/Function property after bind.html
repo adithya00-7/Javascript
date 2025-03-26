@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sayHi() {
+            alert( this.name );
+            }
+            sayHi.test = 5;
+
+            let bound = sayHi.bind({
+            name: "John"
+            });
+
+        alert( bound.test ); // what will be the output? why?
+        //output is undefined
+    </script>
+</body>
+</html>
