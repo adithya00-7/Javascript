@@ -28,11 +28,11 @@
         });
         }
 
-        let promise1 = Promise.resolve('Result 1');
-        let promise2 = Promise.reject(new Error('Failure in promise2'));
-        let promise3 = Promise.resolve('Result 3');
+        let _1 = Promise.resolve('promise 1');
+        let _2 = Promise.reject(new Error('Failure in promise2'));
+        let _3 = Promise.resolve('promise 3');
 
-        allOrAggregateError([promise1, promise2, promise3]);
+        allOrAggregateError([_1, _2, _3]);
     </script>
 </body>
 </html>
