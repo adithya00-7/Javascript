@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        new Promise(function(resolve, reject) {
+            setTimeout(() => {
+                throw new Error("Whoops!");
+            }, 1000);
+            }).catch(alert);
+            //Q: What do you think? Will the .catch trigger? Explain your answer.
+
+            //here the catch will not be triggered.The error is thrown inside setTimeout, and it’s not part of the promise’s flow. So JavaScript will treat it as an unhandled runtime error.
+    </script>
+</body>
+</html>
