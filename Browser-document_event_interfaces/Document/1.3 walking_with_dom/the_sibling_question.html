@@ -1,0 +1,13 @@
+<html>
+<body>
+  <div>Users:</div>
+  <ul>
+    <li>John</li>
+    <li>Pete</li>
+  </ul>
+<script>
+    alert(document.lastChild.nextSibling);//Yes, true. The element elem.lastChild is always the last one, it has no nextSibling.
+    alert(document.children[0].previousSibling);//Not always There may or maynot have previous sibling.
+</script>
+</body>
+</html>
