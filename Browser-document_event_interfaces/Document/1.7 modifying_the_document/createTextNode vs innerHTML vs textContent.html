@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="elem1"></div>
+    <div id="elem2"></div>
+    <div id="elem3"></div>
+    <script>
+    let text = '<b>text</b>';
+
+    elem1.append(document.createTextNode(text));//1
+    elem2.innerHTML = text;//2
+    elem3.textContent = text;//3
+    //here #1 and #3 are truly equivalent for inserting plain text into an empty element — while #2 behaves differently when HTML is involved.
+    </script>
+
+</body>
+</html>
