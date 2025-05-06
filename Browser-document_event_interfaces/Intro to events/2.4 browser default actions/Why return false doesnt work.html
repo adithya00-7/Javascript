@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  function handler() {
+    alert( "..." );
+    return false;
+  }
+</script>
+
+<a href="https://w3.org" onclick="handler()">the browser will go to w3.org</a>
+</body>
+</html>
+<!-- You're calling the function handler() from inside the onclick attribute, but not using its return value.
+
+So even though handler() returns false, that false isn't being returned from the onclick handler. The browser doesn’t know you wanted to cancel the default action.
+
+the fix is like :
+<script>
+  function handler() {
+    alert("...");
+    return false;
+  }
+</script>
+
+<a href="https://w3.org" onclick="return handler()">w3.org</a>
+
+-->
+
