@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #box {
+      width: 300px;
+      height: 150px;
+      overflow: auto;
+      border: 1px solid #000;
+    }
+    .content {
+      height: 500px;
+      background: linear-gradient(white, lightgray);
+    }
+  </style>
+</head>
+<body>
+
+<div id="box">
+  <div class="content">Scroll down...</div>
+</div>
+
+<p>Scroll bottom: <span id="scrollBottom">0</span> px</p>
+
+<script>
+  const box = document.getElementById('box');
+  const output = document.getElementById('scrollBottom');
+
+  box.onscroll = () => {
+    const scrollBottom = box.scrollHeight - box.scrollTop - box.clientHeight;
+    output.textContent = scrollBottom.toFixed(0);
+  };
+</script>
+
+</body>
+</html>
