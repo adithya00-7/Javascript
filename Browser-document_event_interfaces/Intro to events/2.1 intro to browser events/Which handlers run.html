@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="button">Click me</button>
+
+<script>
+  const button = document.getElementById("button");
+
+  // This handler will run
+  button.addEventListener("click", () => alert("1"));
+
+  // This does NOT remove the handler above, because it's a different function
+  button.removeEventListener("click", () => alert("1"));
+
+  // This is assigned as a separate handler and will also run
+  button.onclick = () => alert("2");
+</script>
+
+</body>
+</html>
