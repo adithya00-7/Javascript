@@ -1,0 +1,9 @@
+
+We have a regexp /Java[^script]/.
+
+1. Does it match anything in the string Java?
+2. In the string JavaScript?
+
+Answer:
+1. In the script Java it doesn’t match anything, because [^script] means “any character except given ones”. So the regexp looks for "Java" followed by one such symbol, but there’s a string end, no symbols after it.
+2. Yes, because the [^script] part matches the character "S". It’s not one of script. As the regexp is case-sensitive (no i flag), it treats "S" as a different character from "s".
