@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let regexp = /\[(b|url|quote)].*?\[\/\1]/gs;
+
+        let str = `
+        [b]hello![/b]
+        [quote]
+            [url]http://google.com[/url]
+        [/quote]
+        `;
+
+        alert( str.match(regexp) ); // [b]hello![/b],[quote][url]http://google.com[/url][/quote]
+    </script>
+</body>
+</html>

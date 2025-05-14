@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function parse(expr) {
+            let regexp = /(-?\d+(?:\.\d+)?)\s*([-+*\/])\s*(-?\d+(?:\.\d+)?)/;
+
+            let result = expr.match(regexp);
+
+            if (!result) return [];
+            result.shift();
+
+            return result;
+            }
+
+            alert( parse("-1.23 * 3.45") );  // -1.23, *, 3.45
+    </script>
+</body>
+</html>
