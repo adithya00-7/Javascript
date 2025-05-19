@@ -27,6 +27,7 @@
     .panels {
       min-height: 100vh;
       overflow: hidden;
+      display: flex;
     }
 
     .panel {
@@ -44,20 +45,33 @@
       font-size: 20px;
       background-size: cover;
       background-position: center;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
 
-    .panel1 { background-image:url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500); }
-    .panel2 { background-image:url(https://source.unsplash.com/rFKUFzjPYiQ/1500x1500); }
+    .panel1 { background-image:url(https://res.cloudinary.com/icelandtours/g_auto,f_auto,c_auto,w_3840,q_auto:good/northern_lights_above_glacier_lagoon_v2osk_unsplash_7d39ca647f.jpg); }
+    .panel2 { background-image:url(https://www.secretatlas.com/img/asset/YXNzZXRzL2hhbmRib29rL2FudGFyY3RpY2EtZGVzdGluYXRpb24tbWljcm8tZ3VpZGUvNTAtYW50YXJjdGljYS1mYWN0cy96b2RpYWMtY3J1aXNlLWluLWZyb250LW9mLWdsYWNpZXItc2VjcmV0LWF0bGFzLmpwZw/zodiac-cruise-in-front-of-glacier-secret-atlas.jpg?w=1800&h=1205&s=0fe6bf5f44dcf8829203485829b42455); }
     .panel3 { background-image:url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d); }
-    .panel4 { background-image:url(https://source.unsplash.com/ITjiVXcwVng/1500x1500); }
-    .panel5 { background-image:url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500); }
+    .panel4 { background-image:url(https://cdn.pixabay.com/photo/2023/08/05/16/25/elephants-8171393_1280.jpg); }
+    .panel5 { background-image:url(https://aws-tiqets-cdn.imgix.net/images/content/794bd846c88b4c4ca10678ad44e753cb.jpg?auto=format%2Ccompress&fit=crop&ixlib=python-3.2.1&q=70); }
 
     /* Flex Children */
     .panel > * {
       margin: 0;
       width: 100%;
       transition: transform 0.5s;
+      flex: 1 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
+    .panel >*:first-child{transform: translateY(-100%);}
+    .panel.open-active >*:first-child{transform: translateY(0);}
+    .panel >*:last-child{transform: translateY(100%);}
+    .panel.open-active >*:last-child{transform: translateY(0);}
 
     .panel p {
       text-transform: uppercase;
@@ -71,6 +85,7 @@
     }
 
     .panel.open {
+      flex: 5;
       font-size: 40px;
     }
 
@@ -106,6 +121,28 @@
   </div>
 
   <script>
+    const panels=document.querySelectorAll('.panel');
+    function handler(){
+      panels.forEach(panel => {
+        if (panel !== this) {
+          panel.classList.remove('open');
+          
+        }
+        else{
+          this.classList.add('open');
+        }
+      
+    });
+
+}
+    function active(e){
+      if (e.propertyName.includes('flex')){
+        this.classList.toggle('open-active');
+
+      }
+    }
+    panels.forEach(panel=>panel.addEventListener('mouseenter',handler));
+    panels.forEach(panel=>panel.addEventListener('transitionend',active));
 
   </script>
 
