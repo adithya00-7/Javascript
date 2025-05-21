@@ -160,3 +160,8 @@ input[type=range]::-moz-range-thumb {
   background: #ffc600;
   cursor: pointer;
 }
+.player__controls .fullscreen {
+  flex: 0 0 auto !important;
+  width: 30px !important;
+}
+
