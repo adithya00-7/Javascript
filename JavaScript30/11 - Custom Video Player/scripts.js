@@ -68,3 +68,14 @@ function toggleFullScreen() {
 
 fullscreenButton.addEventListener('click', toggleFullScreen);
 
+const slider=player.querySelectorAll('.player__slider');
+
+
+function changeslider() {
+    video[this.name] = this.value;
+  }
+  
+  slider.forEach(range => {
+    range.addEventListener('mousemove', changeslider);
+  });
+
