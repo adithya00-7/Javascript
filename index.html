@@ -5,58 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        @font-face {
+        font-family: 'Supercharge';
+        src: url('fonts/TrenchThin-aZ1J.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
         body {
-            background-color: #000;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            padding: 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-    
-        a {
-            margin: 1rem;
-            padding: 1rem 2rem;
-            background: linear-gradient(145deg, #111 0%, #1f1f1f 100%);
-            color: #0ff;
-            text-decoration: none;
-            border-radius: 10px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 2px solid #0ff;
-            box-shadow: 0 0 10px #0ff33c4a, 0 0 20px #0ff33c1a inset;
-        }
-    
-        a::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(120deg, transparent, rgba(0, 255, 255, 0.3), transparent);
-            transition: left 0.4s ease;
-            z-index: 1;
-        }
-    
-        a:hover::before {
-            left: 100%;
-        }
-    
-        a:hover {
-            transform: scale(1.08);
-            box-shadow: 0 0 20px #0ff, 0 0 40px #0ff66c88;
-            color: #fff;
-            background: linear-gradient(145deg, #0a0a0a 0%, #1c1c1c 100%);
-        }
-    
-        a:active {
-            transform: scale(0.98);
-            box-shadow: 0 0 15px #0ff inset;
-        }
+  background-color: #000;
+  font-family: 'Supercharge','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+}
+
+a {
+  display: inline-block;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  background-color: #222;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+a:hover {
+  background-color: #444;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 1); /* soft blue shadow */
+}
+
     </style>
     
 </head>
