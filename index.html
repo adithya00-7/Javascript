@@ -5,42 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-            body {
+        body {
             background-color: #000;
-            font-family: sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             padding: 2rem;
-            }
-
-            a {
-            display: inline-block;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+    
+        a {
             margin: 1rem;
             padding: 1rem 2rem;
-            background-color: #222;
-            color: #fff;
+            background: linear-gradient(145deg, #111 0%, #1f1f1f 100%);
+            color: #0ff;
             text-decoration: none;
-            border-radius: 999px;
+            border-radius: 10px;
             font-size: 1.2rem;
             font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-            }
-
-            a:hover {
-            background-color: #444;
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.8); /* soft blue shadow */
-            }
-
-
-
-
-
-        
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #0ff;
+            box-shadow: 0 0 10px #0ff33c4a, 0 0 20px #0ff33c1a inset;
+        }
+    
+        a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(0, 255, 255, 0.3), transparent);
+            transition: left 0.4s ease;
+            z-index: 1;
+        }
+    
+        a:hover::before {
+            left: 100%;
+        }
+    
+        a:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 20px #0ff, 0 0 40px #0ff66c88;
+            color: #fff;
+            background: linear-gradient(145deg, #0a0a0a 0%, #1c1c1c 100%);
+        }
+    
+        a:active {
+            transform: scale(0.98);
+            box-shadow: 0 0 15px #0ff inset;
+        }
     </style>
+    
 </head>
 <body>
     <a href="JavaScript30/01%20-%20JavaScript%20Drum%20Kit/index-START.html">1. Drum Kit</a>
     <a href="JavaScript30/02%20-%20JS%20and%20CSS%20Clock/index-START.html">2. JS and CSS Clock</a>
-    <a href="JavaScript30/21%20-%20Geolocation/index-START.html">3. CSS Variables</a>
+    <a href="JavaScript30/03%20-%20CSS%20Variables/index-START.html">3. CSS Variables</a>
+    <a href="JavaScript30/04%20-%20Array%20Cardio%20Day%201/index-START.html">4. Array Cardio Day 1</a>
+    <a href="JavaScript30/05%20-%20Flex%20Panel%20Gallery/index-START.html">5. Flex Panel Gallery</a>
+    <a href="JavaScript30/06%20-%20Type%20Ahead/index-START.html">6. Type Ahead</a>
+    <a href="JavaScript30/07%20-%20Array%20Cardio%20Day%202/index-START.html">7. Array Cardio Day 2</a>
+    <a href="JavaScript30/08%20-%20Fun%20with%20HTML5%20Canvas/index-START.html">8. Fun With HTML 5 Canvas</a>
+    <a href="JavaScript30/09%20-%20Dev%20Tools%20Domination/index-START.html">9. Dev Tools Domination</a>
+    <a href="JavaScript30/10%20-%20Hold%20Shift%20and%20Check%20Checkboxes/index-START.html">10. Hold Shift and Check Checkboxes</a>
+    <a href="JavaScript30/11%20-%20Custom%20Video%20Player/index.html">11. Custom Video Player</a>
+    <a href="JavaScript30/12%20-%20Key%20Sequence%20Detection/index-START.html">12. Key Sequence Detection</a>
+    <a href="JavaScript30/13%20-%20Slide%20in%20on%20Scroll/index-START.html">13. Slide in on scroll</a>
+    <a href="JavaScript30/14%20-%20JavaScript%20References%20VS%20Copying/index-START.html">14. JS References vs Copying</a>
+    <a href="JavaScript30/15%20-%20LocalStorage/index-START.html">15. Local Storage</a>
+    <a href="JavaScript30/16%20-%20Mouse%20Move%20Shadow/index-START.html">16. Mouse and Move Shadow</a>
+    <a href="JavaScript30/17%20-%20Sort%20Without%20Articles/index-START.html">17. Sort without Articles</a>
+    <a href="JavaScript30/18%20-%20Adding%20Up%20Times%20with%20Reduce/index-START.html">18. Adding Up Times with Reduce</a>
+    <a href="JavaScript30/19%20-%20Webcam%20Fun/index.html">19. Webcam Fun</a>
+    <a href="JavaScript30/20%20-%20Speech%20Detection/index-START.html">20. Speech Detection</a>
+    <a href="JavaScript30/21%20-%20Geolocation/index-START.html">21. Geolocation</a>
+    <a href="JavaScript30/22%20-%20Follow%20Along%20Link%20Highlighter/index-START.html">22. Follow along link highlighter</a>
+    <a href="JavaScript30/23%20-%20Speech%20Synthesis/index-START.html">23. Speech Synthesis</a>
+    <a href="JavaScript30/24%20-%20Sticky%20Nav/index-START.html">24. Sticky Nav</a>
+    <a href="JavaScript30/25%20-%20Event%20Capture%2C%20Propagation%2C%20Bubbling%20and%20Once/index-START.html">25. Event Capture, Propagation, Bubbling and Once</a>
+    <a href="JavaScript30/26%20-%20Stripe%20Follow%20Along%20Nav/index-START.html">26. Stripe Follow Along Nav</a>
+    <a href="JavaScript30/27%20-%20Click%20and%20Drag/index-START.html">27. Click and Drag</a>
+    <a href="JavaScript30/28%20-%20Video%20Speed%20Controller/index-START.html">28. Video Speed Controller</a>
+    <a href="JavaScript30/29%20-%20Countdown%20Timer/scripts-START.js">29. Countdown Timer</a>
+    <a href="JavaScript30/30%20-%20Whack%20A%20Mole/index-START.html">30. Whack a Mole</a>
+    
+
+
+
+
+    
+
+    
     
 </body>
 </html>
