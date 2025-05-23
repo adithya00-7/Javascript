@@ -49,6 +49,10 @@ nav {
   position: relative;
   z-index: 1;
 }
+.fixed-nav nav{
+  position: fixed;
+
+}
 
 nav ul {
   margin: 0;
@@ -56,6 +60,18 @@ nav ul {
   list-style: none;
   display: flex;
 }
+.image1 {
+  background-image: url('https://images.pexels.com/photos/189349/pexels-photo-189349.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 300px; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Optional: make text readable */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Optional: improve contrast */
+}
+
 
 nav li {
   flex: 1;
@@ -69,9 +85,13 @@ li.logo {
   max-width: 0;
   overflow: hidden;
   background: white;
-  transition: all .5s;
+  transition: all .8s;
   font-weight: 600;
   font-size: 30px;
+}
+.fixed-nav li.logo{
+  max-width: 500px;
+
 }
 
 li.logo a {

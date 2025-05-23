@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <header>
+  <header class="image1">
     <h1>A story about getting lost.</h1>
   </header>
 
@@ -55,6 +55,21 @@
   </div>
 
 <script>
+const navbar=document.querySelector('#main');
+const navtop=navbar.offsetTop;
+
+function handler(){
+  if(window.scrollY>=navtop){
+    document.body.classList.add('fixed-nav');
+  }
+  else{
+    document.body.classList.remove('fixed-nav');
+  }
+
+}
+
+window.addEventListener('scroll',handler);
+
 
 </script>
 
